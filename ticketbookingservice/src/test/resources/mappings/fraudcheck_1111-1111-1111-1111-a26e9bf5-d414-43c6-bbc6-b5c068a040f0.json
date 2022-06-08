@@ -1,0 +1,20 @@
+{
+  "id" : "a26e9bf5-d414-43c6-bbc6-b5c068a040f0",
+  "name" : "fraudcheck_1111-1111-1111-1111",
+  "request" : {
+    "url" : "/fraudCheck/1111-1111-1111-1111",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"blacklisted\":false}",
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Tue, 07 Jun 2022 13:02:31 GMT",
+      "Keep-Alive" : "timeout=60"
+    }
+  },
+  "uuid" : "a26e9bf5-d414-43c6-bbc6-b5c068a040f0",
+  "persistent" : true,
+  "insertionIndex" : 2
+}

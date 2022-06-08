@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.greenlearner'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	//implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+
+	//wiremock sir goes here..
+	testCompile "com.github.tomakehurst:wiremock-jre8:2.27.0"
+	//wiremock standaloner server
+	testCompile "com.github.tomakehurst:wiremock-standalone:2.27.0" //we dont need the above dependancy anymore
+}
+
+test {
+	useJUnitPlatform()
+}
